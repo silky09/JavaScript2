@@ -9,3 +9,18 @@ function fetchPokemonData() {
 }
 
 /* Code goes below */
+//console.log(fetchPokemonData());
+
+
+let pokemonData = JSON.parse(fetchPokemonData());
+console.log(pokemonData);
+
+let spritesLists = Object.values(pokemonData.sprites);
+let imagesLists = spritesLists.filter(i => i != null);
+
+const showImages = imagesLists.map(image => {
+    pokemonImage = document.createElement('img');
+    pokemonImage.src = image;
+    pokemonImage.height = '200';
+    document.body.appendChild(pokemonImage);
+});
