@@ -6,12 +6,16 @@ function repeatStringNumTimesWithFor(str, num) {
   let result = '';
 
   // Replace this comment and the next line with your code
-  console.log(str, num, result);
+  for (let i = 0; i < num; i++) {
+    result += str;
+    
+  }
+  // console.log(str, num, result);
 
   return result;
 }
 
-console.log('for', repeatStringNumTimesWithFor('abc', 3));
+console.log('for', repeatStringNumTimesWithFor('abc', 3)); //  for abcabcabc
 
 // Use a 'while' loop
 function repeatStringNumTimesWithWhile(str, num) {
@@ -19,12 +23,17 @@ function repeatStringNumTimesWithWhile(str, num) {
   let result = '';
 
   // Replace this comment and the next line with your code
-  console.log(str, num, result);
+  while (num > 0) {
+    result += str;
+    num--;
+    
+  }
+  // console.log(str, num, result);
 
   return result;
 }
 
-console.log('while', repeatStringNumTimesWithWhile('abc', 3));
+console.log('while', repeatStringNumTimesWithWhile('abc', 3));  // while abcabcabc
 
 // Use a 'do...while' loop
 function repeatStringNumTimesWithDoWhile(str, num) {
@@ -32,12 +41,16 @@ function repeatStringNumTimesWithDoWhile(str, num) {
   let result = '';
 
   // Replace this comment and the next line with your code
-  console.log(str, num, result);
+  do {
+    result += str;
+    num--;
+  } while (num > 0);
+  //console.log(str, num, result);
 
   return result;
 }
 
-console.log('do-while', repeatStringNumTimesWithDoWhile('abc', 3));
+console.log('do-while', repeatStringNumTimesWithDoWhile('abc', 3));  // do-while abcabcabc
 
 // Do not change or remove anything below this line
 module.exports = {
