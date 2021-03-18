@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+
 'use strict';
 
 function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
@@ -7,17 +9,15 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
   for (let number = startIndex; number <= stopIndex; number++) {
     numbers.push(number);
     if (number % 3 === 0) {
-      sayThree(number);
+      threeCallback(number);
     }
     if (number % 5 === 0) {
-      sayFive(number);
+      fiveCallback(number);
     }
   }
-
-  console.log(startIndex, stopIndex, threeCallback, fiveCallback, numbers); //  10 15 [λ: sayThree] [λ: sayFive] [ 10, 11, 12, 13, 14, 15 ]
-  
+  return null;
+  // console.log(startIndex, stopIndex, threeCallback, fiveCallback, numbers); //  10 15 [λ: sayThree] [λ: sayFive] [ 10, 11, 12, 13, 14, 15 ]
 }
-
 
 function sayThree(number) {
   // Replace this comment and the next line with your code
